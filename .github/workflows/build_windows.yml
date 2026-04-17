@@ -22,7 +22,7 @@ jobs:
 
       # 🔥 FIX QUAN TRỌNG
       - name: Generate Windows platform
-        run: flutter create .
+        run: flutter create . --project-name library_pc_v1
 
       - name: Install dependencies
         run: flutter pub get
