@@ -20,8 +20,16 @@ jobs:
           channel: 'stable'
           cache: true
 
+      # 🔥 FIX QUAN TRỌNG
+      - name: Generate Windows platform
+        run: flutter create .
+
       - name: Install dependencies
         run: flutter pub get
+
+      # (optional nhưng nên có)
+      - name: Enable Windows
+        run: flutter config --enable-windows-desktop
 
       - name: Build Windows
         run: flutter build windows --release
